@@ -1,0 +1,28 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #000000;
+    image-rendering: pixelated;
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+html,
+body {
+    overflow: hidden;
+    height: 100%;
+     /* 禁止触发默认的手势操作, 因为我监听的元素有passive: true属性,调用preventDefault()失败  (PIXI.js  使用preventDefault报错！ )*/
+     touch-action: none;
+     -webkit-text-size-adjust: none !important;
+}
+
+html div {
+    width: 0px;
+    height: 0px;
+}
+
+canvas {
+    display: block;
+}

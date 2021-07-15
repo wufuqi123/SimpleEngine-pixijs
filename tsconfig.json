@@ -1,0 +1,36 @@
+{
+    "compilerOptions": {
+        "module": "commonjs",
+        "moduleResolution": "node",
+        "outDir": "./lib/",
+        "target": "es5",
+        "sourceMap": true,
+        "allowJs": true,
+        "strict": true,
+        "lib": [
+            "es2017",
+            "dom"
+        ],
+        "types": [
+            "jest",
+            "tween.js"
+        ],
+        "typeRoots": [
+            "node_modules/@types",
+        ],
+        "baseUrl": "./" ,
+        "paths":{
+            "@/*":["src/*"],
+            "@core/*":["core/*"],
+        }
+    },
+    "include": [
+        "src/**/*.ts",
+        "node_modules/@types", 
+        "src/framework/gui/components/plug/TextInput.js", "src/framework/filters/shader/NoiseOpenGL.ts"
+    ],
+    "exclude": [
+        ".git",
+        "node_modules"
+    ]
+}
