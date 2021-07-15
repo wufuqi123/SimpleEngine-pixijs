@@ -42,17 +42,8 @@ node_modules/
 jspm_packages/
 dist/
 /dist/
-dist/resources/
-resources/
-/resources/
 dev_dist/
 /dev_dist/
-dev_dist/resources/
-static/resources/
-src/avggame/
-src/framework/
-/native/dist/
-/native/android/app/src/main/assets/web/
 
 # TypeScript v1 declaration files
 typings/
