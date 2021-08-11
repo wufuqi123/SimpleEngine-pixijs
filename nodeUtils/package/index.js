@@ -1,7 +1,7 @@
 const Bundler = require('parcel-bundler');
 const Path = require('path');
-const StaticPackage = require('../build/StaticPackage.js')["default"];
-const File = require("../../server/File.js")["default"];
+// const StaticPackage = require('../build/StaticPackage.js')["default"];
+// const File = require("../../server/File.js")["default"];
 const entryFiles = "src/index.html";
 // Bundler 选项
 const options = {
@@ -36,41 +36,39 @@ const options = {
     // detailedReport: false // 打印 bundles、资源、文件大小和使用时间的详细报告，默认为 false，只有在禁用监听状态时才打印报告
 };
 
-File.delete("dist");
-let deleteFileDir = "./dist/resources"
-let retainDirArr = ["assets"]
+// File.delete("dist");
+// let deleteFileDir = "./dist/resources"
+// let retainDirArr = ["assets"]
 
 const bundler = new Bundler(entryFiles, options);
 const bundle = bundler.bundle();
 bundler.on('buildEnd', () => {
-    setTimeout(() => {
-        mergeRes(() => {
-            let dirArr = File.readDir(deleteFileDir);
-            dirArr.forEach((dir) => {
-                if (retainDirArr.includes(dir)) {
-                    return;
-                }
-                File.delete(deleteFileDir + "/" + dir);
-            });
-        });
-    }, 500);
+    // setTimeout(() => {
+    //     mergeRes(() => {
+    //         let dirArr = File.readDir(deleteFileDir);
+    //         dirArr.forEach((dir) => {
+    //             if (retainDirArr.includes(dir)) {
+    //                 return;
+    //             }
+    //             File.delete(deleteFileDir + "/" + dir);
+    //         });
+    //     });
+    // }, 500);
 });
 
-let libRes = "./dist/lib/default.lib.json";
-let resourcesRes = "./dist/resources/default.lib.json";
 
-function mergeRes(callback) {
-    File.readFileStr(libRes, (err, data) => {
-        let out = JSON.parse(data);
-        File.readFileStr(resourcesRes, (err, data) => {
-            let ins = JSON.parse(data);
-            for (let key in ins) {
-                let d = ins[key];
-                d.resources = true;
-                out[key] = d;
-            }
-            File.createFile(libRes, JSON.stringify(out), callback);
-            // console.log("heheh", data);
-        });
-    });
-}
+// function mergeRes(callback) {
+//     File.readFileStr(libRes, (err, data) => {
+//         let out = JSON.parse(data);
+//         File.readFileStr(resourcesRes, (err, data) => {
+//             let ins = JSON.parse(data);
+//             for (let key in ins) {
+//                 let d = ins[key];
+//                 d.resources = true;
+//                 out[key] = d;
+//             }
+//             File.createFile(libRes, JSON.stringify(out), callback);
+//             // console.log("heheh", data);
+//         });
+//     });
+// }

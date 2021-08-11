@@ -5,7 +5,7 @@
     "scripts": {
         "test": "jest",
         "start": "npm run clean && parcel src/index.html",
-        "build": "tsc ./savedata/index.ts && node ./savedata/index.js && node ./nodeUtils/package/index.js && start chrome http://localhost:45678/index.html && http-server dist -e -p 45678 -c-1",
+        "build": "npm run clean && node ./nodeUtils/package/index.js && start chrome http://localhost:45678/index.html && http-server dist -e -p 45678 -c-1",
         "clean": "rimraf ./dist ./.cache"
     },
     "author": "Niawag",
