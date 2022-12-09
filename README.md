@@ -1,5 +1,5 @@
 # SimpleEngine-pixijs
-本项目基于pixi.js(最快的2D H5渲染引擎[API](http://pixijs.download/release/docs/PIXI.Application.html)，[示例](https://pixijs.io/examples/#/demos-basic/container.js))、pixi-spine(pixiJs的spine库[GitHub源码](https://github.com/pixijs/spine)，[API](https://github.com/pixijs/spine/blob/master/examples/index.md))、pixi-particles(pixiJs的粒子库[GitHub源码](https://github.com/pixijs/pixi-particles)，[API](https://pixijs.io/pixi-particles/docs/)，[粒子编辑器](http://106.12.215.217:17000/tools/particleeditor))、pixi-filters(pixiJs的shader特效库[GitHub源码和示例](https://github.com/pixijs/filters))的基础上进行继续封装。
+本项目基于pixi.js(最快的2D H5渲染引擎[API](http://pixijs.download/release/docs/PIXI.Application.html)，[示例](https://pixijs.io/examples/#/demos-basic/container.js))、pixi-spine(pixiJs的spine库[GitHub源码](https://github.com/pixijs/spine)，[API](https://github.com/pixijs/spine/blob/master/examples/index.md))、pixi-particles(pixiJs的粒子库[GitHub源码](https://github.com/wufuqi123/ParticleEditor)，[API](https://pixijs.io/pixi-particles/docs/)，[粒子编辑器](https://wufuqi123.github.io/ParticleEditor/#pixieDust))、pixi-filters(pixiJs的shader特效库[GitHub源码和示例](https://github.com/pixijs/filters))的基础上进行继续封装。
 
 
 
